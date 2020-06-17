@@ -1,0 +1,77 @@
+Step by Step Guide to Setup and Install Apache Tomcat Server in Eclipse Development Environment (IDE)
+Last Updated on August 4th, 2018 by   App Shah   69 comments
+
+
+Eclipse is a very powerful development environment for Java. Mainly for Web Development project you need Web Server. Apache Tomcat is the best production ready web container.
+
+By default when you download Eclipse IDE, it doesn’t come with Tomcat install with it. In this tutorial we will go over all detailed steps to configure Apache Tomcat successfully in Eclipse environment.
+
+Have any of below questions? Then you are at right place.
+Configuration of the Eclipse Workspace and Apache Tomcat
+How can I add Tomcat server to eclipse?
+Installing Apache Tomcat Server – Eclipse
+Tutorial: Configuring and Using Apache Tomcat 9 with Eclipse
+Apache Tomcat Eclipse Integration Guide & Plugin
+how to add apache tomcat server in eclipse Photon?
+Step-1
+Download Apache Tomcat from this link. I’m using version 9.0.10.
+
+Download Apache Tomcat 9 Version - Crunchify Tips
+
+Step-2
+Extract it to Document folder.
+
+Extract Apache Tomcat To Document Folder
+
+Step-3
+Open Eclipse Environment
+Click on Servers Tab
+Click on No servers are available. Click this link to create a new server...
+Click Tomcat v9.0 Server and Next
+Choose Eclipse, Server Tab, Add Server, Select Apache Tomcat
+
+Step-4
+Select Apache installation Directory and click Finish.
+
+Add new Apache Tomcat Server in Eclipse
+
+Step-5
+You should see Tomcat v9.0 Server at localhost [Stopped, Republish] under Servers tab. Double click on it verify HTTP ports information. By default HTTP port is 8080.
+
+Apache Tomcat 8 HTTP Port 8080
+
+Step-6
+Now right click on Server and click Start.
+
+Start Apache Tomcat in Eclipse - Crunchify Tips
+
+Console output:
+
+Aug 04, 2018 11:12:57 AM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/9.0.10
+INFO: OS Name:               Mac OS X
+INFO: OS Version:            10.13.6
+INFO: Architecture:          x86_64
+INFO: Java Home:             /Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home
+INFO: JVM Version:           10.0.2+13
+INFO: JVM Vendor:            "Oracle Corporation"
+INFO: CATALINA_BASE:         /Users/appshah/Documents/jee-photon/workspace/c/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+INFO: CATALINA_HOME:         /Users/appshah/Documents/jee-photon/apache-tomcat-9.0.10
+INFO: Command line argument: -Dcatalina.base=/Users/appshah/Documents/jee-photon/workspace/c/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+INFO: Command line argument: -Dcatalina.home=/Users/appshah/Documents/jee-photon/apache-tomcat-9.0.10
+INFO: Command line argument: -Dwtp.deploy=/Users/appshah/Documents/jee-photon/workspace/c/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
+INFO: Command line argument: -Dfile.encoding=UTF-8
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/appshah/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+INFO: Using a shared selector for servlet write/read
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+INFO: Using a shared selector for servlet write/read
+INFO: Initialization processed in 1946 ms
+INFO: Starting service [Catalina]
+INFO: Starting Servlet Engine: Apache Tomcat/9.0.10
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+WARNING: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [262] milliseconds.
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+INFO: Server startup in 1655 ms
+It should be up and running on port 8080 and you could visit default page using URL: http://localhost:8080/
